@@ -12,7 +12,7 @@ class HelpCommand(commands.Cog):
         em = discord.Embed(title="List of Spells", description="Use -help (command) for more information on usage.",
                            color=ctx.author.color)
         em.set_thumbnail(url=ctx.author.avatar_url)
-        em.add_field(name="Moderation", value="`clear`,`ban`,`kick`,`unban`,`mute`,`unmute`")
+        em.add_field(name="Moderation", value="`clear`,`ban`,`kick`,`unban`,`mute`,`unmute`,`announcement`")
         em.add_field(name="Commands", value="`ask`,`ping`, `rank`, `leaderboard`, `jack`")
         em.add_field(name="Overwatch Commands", value="`register`, `unregister`,`battletag`, `owprofile`")
         em.add_field(name="Apex Commands", value="`addbug`, `buglist`, `patched`")
@@ -154,15 +154,19 @@ class HelpCommand(commands.Cog):
 
     @help.command()
     async def addbug(self, ctx):
-        em = discord.Embed(Title="Addbug", description="Report a apex bug to be added to a ongoing list of unpatched bugs", color=ctx.author.color)
+        em = discord.Embed(Title="Addbug",
+                           description="Report a apex bug to be added to a ongoing list of unpatched bugs",
+                           color=ctx.author.color)
 
-        em.add_field(name="**Usage**", value="-addbug (Bug Title) (Link To Video) (Description) **Important:** Title must be one word")
+        em.add_field(name="**Usage**",
+                     value="-addbug (Bug Title) (Link To Video) (Description) **Important:** Title must be one word")
 
         await ctx.send(embed=em)
 
     @help.command()
     async def buglist(self, ctx):
-        em = discord.Embed(Title="Buglist", description="Shows the list of currently unpatched Apex Bugs", color=ctx.author.color)
+        em = discord.Embed(Title="Buglist", description="Shows the list of currently unpatched Apex Bugs",
+                           color=ctx.author.color)
 
         em.add_field(name="**Usage**", value="-buglist")
 
@@ -170,9 +174,20 @@ class HelpCommand(commands.Cog):
 
     @help.command()
     async def patched(self, ctx):
-        em = discord.Embed(Title="Patched", description="Removes a bug from the bug list for it has been patched", color=ctx.author.color)
+        em = discord.Embed(Title="Patched", description="Removes a bug from the bug list for it has been patched",
+                           color=ctx.author.color)
 
         em.add_field(name="**Usage**", value="-patched (bug title)")
+
+        await ctx.send(embed=em)
+
+    @help.command()
+    async def announcement(self, ctx):
+        em = discord.Embed(Title="Announcement", description="Create an announcement and send it to a specific channel",
+                           color=ctx.author.color)
+
+        em.add_field(name="**Usage**",
+                     value="-announcement event title $ event date (m/d/y) $ event start time (time am/pm) $ event description $ channel name to send to(must be exact)")
 
         await ctx.send(embed=em)
 
