@@ -1,9 +1,0 @@
-{
-    "TOKEN": "OTAzNDg4NjkwMjQ3MDY5NzE3.YXttaQ.I84glyYLDgvXUiD5thD0W9Pna38",
-    "PREFIX": "-",
-    "OWNER_ID": "376244886976069635",
-    "MONGO": "mongodb+srv://Gerard:Rizzarelly123@gerardthewizard.gqwvm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "BTMONGO": "mongodb+srv://battletags:Rizzarelly123@gerardbattletags.sezno.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "ABMONGO": "mongodb+srv://Gerard:Rizzarelly123@apexbugs.audd4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "JACK": "590386323165151250"
-}
