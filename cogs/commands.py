@@ -50,7 +50,6 @@ class Commands(commands.Cog):
     async def jack(self, ctx, *, msg=None):
         guild = ctx.guild
         jack = await guild.fetch_member(jackid)
-        message = discord.Message
         if msg is None:
             await ctx.send('I need a message to send to Jack.')
         else:
